@@ -1,2 +1,3 @@
 # 4
-Concept of custom social network
+
+Concept of customizable blogging platform.
