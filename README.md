@@ -1,2 +1,7 @@
 # 4
-Concept of custom social network
+
+Customizable blogging platform.
+
+## ⚠️ Disclaimer
+
+Undercooked.
