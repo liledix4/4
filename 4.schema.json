@@ -2,10 +2,41 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "additionalProperties": false,
+    "required": ["$schema_version"],
     "properties": {
+        "$schema_version": {
+            "type": "string",
+            "enum": ["2025.01 Alpha 2"]
+        },
         "$schema": {
             "type": "string",
             "pattern": "4\\.schema\\.json$"
+        },
+        "blog_meta": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["title"],
+            "properties": {
+                "title": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "icon": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["uncompressed", "16", "64", "256"],
+                    "properties": {
+                        "uncompressed": {
+                            "type": "string",
+                            "pattern": "\\.(jpg|png|webp)$"
+                        },
+                        "16": {"$ref": "#/properties/blog_meta/properties/icon/properties/uncompressed"},
+                        "64": {"$ref": "#/properties/blog_meta/properties/icon/properties/uncompressed"},
+                        "128": {"$ref": "#/properties/blog_meta/properties/icon/properties/uncompressed"},
+                        "256": {"$ref": "#/properties/blog_meta/properties/icon/properties/uncompressed"}
+                    }
+                }
+            }
         },
         "load": {
             "type": "array",
