@@ -1,0 +1,6 @@
+[submodule "gears/modules/js_xhr_ajax"]
+	path = gears/modules/js_xhr_ajax
+	url = https://github.com/liledix4/js_xhr_ajax
+[submodule "gears/modules/js_load_series_of_files"]
+	path = gears/modules/js_load_series_of_files
+	url = https://github.com/liledix4/js_load_series_of_files
