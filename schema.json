@@ -10,7 +10,7 @@
     },
     "$schema": {
       "type": "string",
-      "pattern": "4\\.schema\\.json$"
+      "pattern": "\/schema\\.json$"
     },
     "blog_meta": {
       "type": "object",
